@@ -1,4 +1,4 @@
-package com.kyrostechnologies.sample.mailbox;
+package com.kyrostechnologies.template.mailbox;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -21,11 +21,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.kyrostechnologies.sample.mailbox.data.Constant;
-import com.kyrostechnologies.sample.mailbox.data.GlobalVariable;
-import com.kyrostechnologies.sample.mailbox.data.Tools;
-import com.kyrostechnologies.sample.mailbox.model.Mail;
-import com.kyrostechnologies.sample.mailbox.model.People;
+import com.kyrostechnologies.template.mailbox.data.Constant;
+import com.kyrostechnologies.template.mailbox.data.GlobalVariable;
+import com.kyrostechnologies.template.mailbox.data.Tools;
+import com.kyrostechnologies.template.mailbox.model.Mail;
+import com.kyrostechnologies.template.mailbox.model.People;
 
 import java.util.ArrayList;
 import java.util.List;

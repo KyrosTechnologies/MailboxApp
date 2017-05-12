@@ -1,4 +1,4 @@
-package com.kyrostechnologies.sample.mailbox.model;
+package com.kyrostechnologies.template.mailbox.model;
 
 import java.io.Serializable;
 

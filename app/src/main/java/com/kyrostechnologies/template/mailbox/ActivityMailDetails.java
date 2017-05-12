@@ -1,4 +1,4 @@
-package com.kyrostechnologies.sample.mailbox;
+package com.kyrostechnologies.template.mailbox;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,11 +18,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.kyrostechnologies.sample.mailbox.adapter.MailListAdapter;
-import com.kyrostechnologies.sample.mailbox.data.GlobalVariable;
-import com.kyrostechnologies.sample.mailbox.data.Tools;
-import com.kyrostechnologies.sample.mailbox.model.Mail;
-import com.kyrostechnologies.sample.mailbox.widget.CircleTransform;
+import com.kyrostechnologies.template.mailbox.adapter.MailListAdapter;
+import com.kyrostechnologies.template.mailbox.data.GlobalVariable;
+import com.kyrostechnologies.template.mailbox.data.Tools;
+import com.kyrostechnologies.template.mailbox.model.Mail;
+import com.kyrostechnologies.template.mailbox.widget.CircleTransform;
 import com.squareup.picasso.Picasso;
 
 public class ActivityMailDetails extends AppCompatActivity {

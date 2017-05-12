@@ -1,4 +1,4 @@
-package com.kyrostechnologies.sample.mailbox.fragment;
+package com.kyrostechnologies.template.mailbox.fragment;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -21,13 +21,13 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.kyrostechnologies.sample.mailbox.ActivityComposeMail;
-import com.kyrostechnologies.sample.mailbox.R;
-import com.kyrostechnologies.sample.mailbox.adapter.PeoplesListAdapter;
-import com.kyrostechnologies.sample.mailbox.data.Constant;
-import com.kyrostechnologies.sample.mailbox.model.People;
-import com.kyrostechnologies.sample.mailbox.widget.CircleTransform;
-import com.kyrostechnologies.sample.mailbox.widget.DividerItemDecoration;
+import com.kyrostechnologies.template.mailbox.ActivityComposeMail;
+import com.kyrostechnologies.template.mailbox.R;
+import com.kyrostechnologies.template.mailbox.adapter.PeoplesListAdapter;
+import com.kyrostechnologies.template.mailbox.data.Constant;
+import com.kyrostechnologies.template.mailbox.model.People;
+import com.kyrostechnologies.template.mailbox.widget.CircleTransform;
+import com.kyrostechnologies.template.mailbox.widget.DividerItemDecoration;
 import com.squareup.picasso.Picasso;
 
 public class PeoplesFragment extends Fragment {

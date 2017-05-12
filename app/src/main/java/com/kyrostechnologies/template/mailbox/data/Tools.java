@@ -1,11 +1,11 @@
-package com.kyrostechnologies.sample.mailbox.data;
+package com.kyrostechnologies.template.mailbox.data;
 
 import android.app.Activity;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.kyrostechnologies.sample.mailbox.R;
+import com.kyrostechnologies.template.mailbox.R;
 
 /**
  * Created by muslim on 25/11/2015.

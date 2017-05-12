@@ -1,4 +1,4 @@
-package com.kyrostechnologies.sample.mailbox.fragment;
+package com.kyrostechnologies.template.mailbox.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,16 +18,16 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
-import com.kyrostechnologies.sample.mailbox.ActivityComposeMail;
-import com.kyrostechnologies.sample.mailbox.ActivityMailDetails;
-import com.kyrostechnologies.sample.mailbox.ActivityMain;
-import com.kyrostechnologies.sample.mailbox.R;
-import com.kyrostechnologies.sample.mailbox.adapter.MailListAdapter;
-import com.kyrostechnologies.sample.mailbox.data.GlobalVariable;
-import com.kyrostechnologies.sample.mailbox.model.Mail;
-import com.kyrostechnologies.sample.mailbox.widget.DividerItemDecoration;
+import com.kyrostechnologies.template.mailbox.ActivityComposeMail;
+import com.kyrostechnologies.template.mailbox.ActivityMailDetails;
+import com.kyrostechnologies.template.mailbox.ActivityMain;
+import com.kyrostechnologies.template.mailbox.R;
+import com.kyrostechnologies.template.mailbox.adapter.MailListAdapter;
+import com.kyrostechnologies.template.mailbox.data.GlobalVariable;
+import com.kyrostechnologies.template.mailbox.model.Mail;
+import com.kyrostechnologies.template.mailbox.widget.DividerItemDecoration;
 
-public class OutboxFragment extends Fragment {
+public class InboxFragment extends Fragment {
     public RecyclerView recyclerView;
     public MailListAdapter mAdapter;
     private ProgressBar progressBar;
@@ -35,11 +35,10 @@ public class OutboxFragment extends Fragment {
     private View view;
     private SearchView searchView;
     private LinearLayout lyt_not_found;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_outbox, null);
+        view = inflater.inflate(R.layout.fragment_inbox, null);
         global = (GlobalVariable) getActivity().getApplication();
 
         // activate fragment menu
@@ -47,25 +46,26 @@ public class OutboxFragment extends Fragment {
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         lyt_not_found = (LinearLayout) view.findViewById(R.id.lyt_not_found);
-        progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
+        progressBar  = (ProgressBar) view.findViewById(R.id.progressBar);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
 
         // specify an adapter (see also next example)
-        mAdapter = new MailListAdapter(MailListAdapter.OUTBOX_MODE, getActivity(), global.getOutbox());
+        mAdapter = new MailListAdapter(MailListAdapter.INBOX_MODE ,getActivity(), global.getInbox());
         recyclerView.setAdapter(mAdapter);
         mAdapter.setOnItemClickListener(new MailListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, Mail obj, int position) {
-                ActivityMailDetails.navigate((ActivityMain) getActivity(), view.findViewById(R.id.lyt_parent), obj, MailListAdapter.OUTBOX_MODE, position);
+                ActivityMailDetails.navigate((ActivityMain)getActivity(), view.findViewById(R.id.lyt_parent), obj, MailListAdapter.INBOX_MODE, position);
             }
         });
+
         itemTouchHelper.attachToRecyclerView(recyclerView);
-        if (mAdapter.getItemCount() == 0) {
+        if(mAdapter.getItemCount()==0){
             lyt_not_found.setVisibility(View.VISIBLE);
-        } else {
+        }else{
             lyt_not_found.setVisibility(View.GONE);
         }
         return view;
@@ -103,12 +103,12 @@ public class OutboxFragment extends Fragment {
     @Override
     public void onResume() {
         // specify an adapter (see also next example)
-        mAdapter = new MailListAdapter(MailListAdapter.OUTBOX_MODE, getActivity(), global.getOutbox());
+        mAdapter = new MailListAdapter(MailListAdapter.INBOX_MODE ,getActivity(), global.getInbox());
         recyclerView.setAdapter(mAdapter);
         mAdapter.setOnItemClickListener(new MailListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, Mail obj, int position) {
-                ActivityMailDetails.navigate((ActivityMain) getActivity(), view.findViewById(R.id.lyt_parent), obj, MailListAdapter.OUTBOX_MODE, position);
+                ActivityMailDetails.navigate((ActivityMain) getActivity(), view.findViewById(R.id.lyt_parent), obj, MailListAdapter.INBOX_MODE, position);
             }
         });
         super.onResume();
@@ -157,14 +157,6 @@ public class OutboxFragment extends Fragment {
         searchView.onActionViewCollapsed();
         super.onCreateOptionsMenu(menu, inflater);
     }
-
-    private void setItemsVisibility(Menu menu, MenuItem exception, boolean visible) {
-        for (int i = 0; i < menu.size(); ++i) {
-            MenuItem item = menu.getItem(i);
-            if (item != exception) item.setVisible(visible);
-        }
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_mail) {
@@ -172,5 +164,12 @@ public class OutboxFragment extends Fragment {
             startActivity(i);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void setItemsVisibility(Menu menu, MenuItem exception, boolean visible) {
+        for (int i=0; i<menu.size(); ++i) {
+            MenuItem item = menu.getItem(i);
+            if (item != exception) item.setVisible(visible);
+        }
     }
 }

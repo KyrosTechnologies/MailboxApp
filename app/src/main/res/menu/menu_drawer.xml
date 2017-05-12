@@ -24,6 +24,11 @@
             android:icon="@drawable/ic_trash"
             android:title="@string/str_nav_trash"
             app:actionLayout="@layout/menu_counter"/>
+
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/aboutus"
+            android:title="About Us"/>
     </group>
 
     <item android:title="Sub items">

@@ -1,4 +1,4 @@
-package com.kyrostechnologies.sample.mailbox.widget;
+package com.kyrostechnologies.template.mailbox.widget;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;

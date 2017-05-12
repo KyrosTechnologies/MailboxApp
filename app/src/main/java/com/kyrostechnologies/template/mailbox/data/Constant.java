@@ -1,4 +1,4 @@
-package com.kyrostechnologies.sample.mailbox.data;
+package com.kyrostechnologies.template.mailbox.data;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -6,9 +6,9 @@ import android.content.res.TypedArray;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 
-import com.kyrostechnologies.sample.mailbox.R;
-import com.kyrostechnologies.sample.mailbox.model.Mail;
-import com.kyrostechnologies.sample.mailbox.model.People;
+import com.kyrostechnologies.template.mailbox.R;
+import com.kyrostechnologies.template.mailbox.model.Mail;
+import com.kyrostechnologies.template.mailbox.model.People;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.kyrostechnologies.sample.mailbox.fragment;
+package com.kyrostechnologies.template.mailbox.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kyrostechnologies.sample.mailbox.R;
+import com.kyrostechnologies.template.mailbox.R;
 
 public class SettingFragment extends Fragment {
 

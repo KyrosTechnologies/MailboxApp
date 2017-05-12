@@ -1,4 +1,4 @@
-package com.kyrostechnologies.sample.mailbox.widget;
+package com.kyrostechnologies.template.mailbox.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;

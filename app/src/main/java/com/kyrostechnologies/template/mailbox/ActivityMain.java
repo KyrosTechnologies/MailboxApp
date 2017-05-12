@@ -1,6 +1,7 @@
-package com.kyrostechnologies.sample.mailbox;
+package com.kyrostechnologies.template.mailbox;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.design.widget.NavigationView;
@@ -19,15 +20,15 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.kyrostechnologies.sample.mailbox.data.Constant;
-import com.kyrostechnologies.sample.mailbox.data.GlobalVariable;
-import com.kyrostechnologies.sample.mailbox.data.Tools;
-import com.kyrostechnologies.sample.mailbox.fragment.HelpFragment;
-import com.kyrostechnologies.sample.mailbox.fragment.PeoplesFragment;
-import com.kyrostechnologies.sample.mailbox.fragment.InboxFragment;
-import com.kyrostechnologies.sample.mailbox.fragment.OutboxFragment;
-import com.kyrostechnologies.sample.mailbox.fragment.SettingFragment;
-import com.kyrostechnologies.sample.mailbox.fragment.TrashFragment;
+import com.kyrostechnologies.template.mailbox.data.Constant;
+import com.kyrostechnologies.template.mailbox.data.GlobalVariable;
+import com.kyrostechnologies.template.mailbox.data.Tools;
+import com.kyrostechnologies.template.mailbox.fragment.HelpFragment;
+import com.kyrostechnologies.template.mailbox.fragment.PeoplesFragment;
+import com.kyrostechnologies.template.mailbox.fragment.InboxFragment;
+import com.kyrostechnologies.template.mailbox.fragment.OutboxFragment;
+import com.kyrostechnologies.template.mailbox.fragment.SettingFragment;
+import com.kyrostechnologies.template.mailbox.fragment.TrashFragment;
 
 public class ActivityMain extends AppCompatActivity{
 
@@ -139,6 +140,9 @@ public class ActivityMain extends AppCompatActivity{
             case R.id.nav_trash:
                 fragment = new TrashFragment();
                 break;
+            case R.id.about_us:
+                Intent i=new Intent(ActivityMain.this,AboutUs.class);
+                startActivity(i);
             case R.id.nav_setting:
                 fragment = new SettingFragment();
                 break;

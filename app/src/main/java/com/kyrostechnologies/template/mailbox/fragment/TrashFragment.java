@@ -1,4 +1,4 @@
-package com.kyrostechnologies.sample.mailbox.fragment;
+package com.kyrostechnologies.template.mailbox.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,14 +16,14 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
-import com.kyrostechnologies.sample.mailbox.ActivityComposeMail;
-import com.kyrostechnologies.sample.mailbox.ActivityMailDetails;
-import com.kyrostechnologies.sample.mailbox.ActivityMain;
-import com.kyrostechnologies.sample.mailbox.R;
-import com.kyrostechnologies.sample.mailbox.adapter.MailListAdapter;
-import com.kyrostechnologies.sample.mailbox.data.GlobalVariable;
-import com.kyrostechnologies.sample.mailbox.model.Mail;
-import com.kyrostechnologies.sample.mailbox.widget.DividerItemDecoration;
+import com.kyrostechnologies.template.mailbox.ActivityComposeMail;
+import com.kyrostechnologies.template.mailbox.ActivityMailDetails;
+import com.kyrostechnologies.template.mailbox.ActivityMain;
+import com.kyrostechnologies.template.mailbox.R;
+import com.kyrostechnologies.template.mailbox.adapter.MailListAdapter;
+import com.kyrostechnologies.template.mailbox.data.GlobalVariable;
+import com.kyrostechnologies.template.mailbox.model.Mail;
+import com.kyrostechnologies.template.mailbox.widget.DividerItemDecoration;
 
 public class TrashFragment extends Fragment {
     private RecyclerView recyclerView;

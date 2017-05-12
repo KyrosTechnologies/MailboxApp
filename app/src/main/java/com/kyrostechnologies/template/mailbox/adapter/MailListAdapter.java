@@ -1,4 +1,4 @@
-package com.kyrostechnologies.sample.mailbox.adapter;
+package com.kyrostechnologies.template.mailbox.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,10 +14,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.kyrostechnologies.sample.mailbox.R;
-import com.kyrostechnologies.sample.mailbox.data.GlobalVariable;
-import com.kyrostechnologies.sample.mailbox.model.Mail;
-import com.kyrostechnologies.sample.mailbox.widget.CircleTransform;
+import com.kyrostechnologies.template.mailbox.R;
+import com.kyrostechnologies.template.mailbox.data.GlobalVariable;
+import com.kyrostechnologies.template.mailbox.model.Mail;
+import com.kyrostechnologies.template.mailbox.widget.CircleTransform;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
